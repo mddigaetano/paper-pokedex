@@ -8,7 +8,7 @@
 
 void draw_battery(M5EPD_Canvas* canvas);
 
-void draw_screen(M5EPD_Canvas* canvas, Pokemon* poke) {
+void draw_screen(M5EPD_Canvas* canvas, const Pokemon* poke) {
     draw_sprites(canvas, poke);
     draw_info(canvas, poke);
     draw_battery(canvas);

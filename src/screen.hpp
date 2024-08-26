@@ -5,6 +5,6 @@
 
 #include "pokemon.hpp"
 
-void draw_screen(M5EPD_Canvas* canvas, Pokemon* poke);
+void draw_screen(M5EPD_Canvas* canvas, const Pokemon* poke);
 
 #endif

@@ -16,6 +16,6 @@
 
 #include "pokemon.hpp"
 
-void draw_sprites(M5EPD_Canvas* canvas, Pokemon* poke);
+void draw_sprites(M5EPD_Canvas* canvas, const Pokemon* poke);
 
 #endif

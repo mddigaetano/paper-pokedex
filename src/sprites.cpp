@@ -7,15 +7,15 @@
 #include "pokemon.hpp"
 #include "sprites.hpp"
 
-void draw_pokemon(M5EPD_Canvas* canvas, uint16_t pokeid);
+void draw_pokemon(M5EPD_Canvas* canvas, const uint16_t pokeid);
 void draw_types(M5EPD_Canvas* canvas, const char type1[], const char type2[]);
 
-void draw_sprites(M5EPD_Canvas* canvas, Pokemon* poke) {
+void draw_sprites(M5EPD_Canvas* canvas, const Pokemon* poke) {
   draw_pokemon(canvas, poke->id);
   draw_types(canvas, poke->type1, poke->type2);
 }
 
-void draw_pokemon(M5EPD_Canvas* canvas, uint16_t pokeid) {
+void draw_pokemon(M5EPD_Canvas* canvas, const uint16_t pokeid) {
 
   char pokefile[20];
 

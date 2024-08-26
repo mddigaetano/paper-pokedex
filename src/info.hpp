@@ -9,6 +9,6 @@
 #define TITLE_X (SCREEN_WIDTH / 2)
 #define TITLE_Y 10
 
-void draw_info(M5EPD_Canvas* canvas, Pokemon* poke);
+void draw_info(M5EPD_Canvas* canvas, const Pokemon* poke);
 
 #endif

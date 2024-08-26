@@ -81,6 +81,11 @@ void setup() {
 #endif
     delay(1000); // without delay, it shuts down before having updated the screen
 
+#ifdef SD_ENABLE
+    SD.end();
+#else
+    SPIFFS.end();
+#endif
 #ifdef SERIAL_ENABLE
     Serial.println("about to shutdown");
 #endif
