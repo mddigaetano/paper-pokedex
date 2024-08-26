@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <M5EPD.h>
-#include <FFat.h>
 
 #include "config.hpp"
 #include "pokemon.hpp"

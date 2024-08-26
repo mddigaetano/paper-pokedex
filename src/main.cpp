@@ -68,8 +68,8 @@ void setup() {
     SPIFFS
 #endif
     );
-    canvas.createRender(TITLE_TEXT_SIZE);
-    canvas.createRender(DESCRIPTION_TEXT_SIZE);
+    canvas.createRender(TITLE_TEXT_SIZE, 2);
+    canvas.createRender(DESCRIPTION_TEXT_SIZE, 2);
 
     read_pokemon(&selected, random(FIRST_POKEMON, LAST_POKEMON + 1));
 
@@ -81,6 +81,7 @@ void setup() {
 #endif
     delay(1000); // without delay, it shuts down before having updated the screen
 
+    canvas.unloadFont();
 #ifdef SD_ENABLE
     SD.end();
 #else
