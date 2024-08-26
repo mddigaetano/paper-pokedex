@@ -79,8 +79,11 @@ void setup() {
 #ifdef SERIAL_ENABLE
     Serial.println("canvas pushed, ready to shutdown");
 #endif
-    delay(2500); // without delay, it shuts down before having updated the screen
+    delay(1000); // without delay, it shuts down before having updated the screen
 
+#ifdef SERIAL_ENABLE
+    Serial.println("about to shutdown");
+#endif
     M5.shutdown(
 #ifdef RTC_ENABLE
         RTC_ENABLE

@@ -61,12 +61,16 @@ void draw_description(M5EPD_Canvas* canvas, const char description[]) {
         SECTION_INFO_WIDTH, SECTION_INFO_HEIGHT
     );
     string_word_wrap(wrapped);
+    Serial.println("AAAAAAAAAAAAAAAAAAAAAAAAA");
     canvas->printf("%s", wrapped);
+    Serial.println("MAoooo");
 }
 
 void draw_stats(M5EPD_Canvas* canvas, const uint8_t stats[]) {
     char first_row[CHARACTERS_PER_LINE + 1];
     char second_row[CHARACTERS_PER_LINE + 1];
+
+    Serial.println("OOOOOOOOOOOO");
 
     sprintf(first_row,
         "HP :%3hhu    Att:%3hhu    Def:%3hhu",
@@ -86,4 +90,5 @@ void draw_stats(M5EPD_Canvas* canvas, const uint8_t stats[]) {
         SECTION_SPRITES_WIDTH + 10, TYPE1SPRITE_Y + 10);
     canvas->drawString(second_row,
         SECTION_SPRITES_WIDTH + 10, TYPE1SPRITE_Y + 10 + 40);
+    Serial.println("OOOOOOOOOOOOOOOOO");
 }

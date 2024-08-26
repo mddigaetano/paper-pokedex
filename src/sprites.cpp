@@ -38,7 +38,12 @@ void draw_pokemon(M5EPD_Canvas* canvas, uint16_t pokeid) {
   Serial.println("pokebox drawn");
 #endif
   canvas->drawPngFile(
-    SD, pokefile,
+#ifdef SD_ENABLE
+    SD,
+#else
+    SPIFFS,
+#endif
+    pokefile,
     POKESPRITE_X, POKESPRITE_Y,
     POKESPRITE_SIZE, POKESPRITE_SIZE,
     0, 0,
@@ -71,7 +76,12 @@ void draw_types(M5EPD_Canvas* canvas, const char type1[], const char type2[]) {
   );
 #endif
   canvas->drawPngFile(
-    SD, typefile1,
+#ifdef SD_ENABLE
+    SD,
+#else
+    SPIFFS,
+#endif
+    typefile1,
     TYPE1SPRITE_X, TYPE1SPRITE_Y,
     TYPESPRITE_WIDTH, TYPESPRITE_HEIGHT,
     0, 0,
@@ -86,7 +96,12 @@ void draw_types(M5EPD_Canvas* canvas, const char type1[], const char type2[]) {
     );
 #endif
     canvas->drawPngFile(
-      SD, typefile2,
+#ifdef SD_ENABLE
+      SD,
+#else
+      SPIFFS,
+#endif
+      typefile2,
       TYPE2SPRITE_X, TYPE2SPRITE_Y,
       TYPESPRITE_WIDTH, TYPESPRITE_HEIGHT,
       0, 0,
