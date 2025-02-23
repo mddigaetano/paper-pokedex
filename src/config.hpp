@@ -13,7 +13,7 @@
 
 #define RTC_ENABLE (1 * 60 * 60)
 
-// if disabled it default to SPIFFS, but much slower font rendering
+// if disabled it defaults to SPIFFS, but much slower font rendering
 // #define SD_ENABLE 
 
 #define BATTERY_LEVEL_ENABLE
